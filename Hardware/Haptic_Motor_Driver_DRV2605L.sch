@@ -18380,8 +18380,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
 <wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
 <pin name="REG" x="-15.24" y="5.08" visible="pin" length="middle"/>
-<pin name="SCL" x="-15.24" y="2.54" visible="pin" length="middle"/>
-<pin name="SDA" x="-15.24" y="0" visible="pin" length="middle"/>
+<pin name="SCL" x="-15.24" y="0" visible="pin" length="middle"/>
+<pin name="SDA" x="-15.24" y="2.54" visible="pin" length="middle"/>
 <pin name="IN/TRIG" x="-15.24" y="-2.54" visible="pin" length="middle"/>
 <pin name="EN" x="-15.24" y="-5.08" visible="pin" length="middle"/>
 <pin name="VDD/NC" x="15.24" y="-5.08" visible="pin" length="middle" rot="R180"/>
@@ -18503,16 +18503,16 @@ pull-ups from I2C bus</text>
 <wire x1="109.22" y1="93.98" x2="109.22" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="6"/>
-<wire x1="71.12" y1="119.38" x2="76.2" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="76.2" y1="119.38" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U1" gate="U" pin="GND"/>
 <wire x1="149.86" y1="111.76" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="111.76" x2="154.94" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="6"/>
+<wire x1="71.12" y1="119.38" x2="76.2" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="76.2" y1="119.38" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -18535,32 +18535,10 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<wire x1="109.22" y1="116.84" x2="109.22" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="U1" gate="U" pin="REG"/>
 <wire x1="119.38" y1="116.84" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="U" pin="SCL"/>
-<wire x1="119.38" y1="114.3" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="G$1" pin="4"/>
-<pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="114.3" x2="71.12" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="91.44" y1="116.84" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
-<junction x="91.44" y="114.3"/>
-</segment>
-</net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U1" gate="U" pin="SDA"/>
-<pinref part="JP1" gate="G$1" pin="3"/>
-<wire x1="119.38" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="106.68" y1="111.76" x2="71.12" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="116.84" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
-<junction x="106.68" y="111.76"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="116.84" x2="109.22" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -18620,6 +18598,28 @@ pull-ups from I2C bus</text>
 <wire x1="149.86" y1="106.68" x2="152.4" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="106.68" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
 <junction x="152.4" y="116.84"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U1" gate="U" pin="SDA"/>
+<pinref part="JP1" gate="G$1" pin="4"/>
+<wire x1="119.38" y1="114.3" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="114.3" x2="71.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="116.84" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
+<junction x="91.44" y="114.3"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U1" gate="U" pin="SCL"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
+<wire x1="119.38" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="106.68" y1="111.76" x2="71.12" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="116.84" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
+<junction x="106.68" y="111.76"/>
 </segment>
 </net>
 </nets>
