@@ -18367,9 +18367,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="-1.305" y="1.56" radius="0.1" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="-1.24" x2="1.795" y2="-1.24" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="1.36" x2="1.795" y2="1.36" width="0.1" layer="21"/>
-<text x="-2.905" y="-0.14" size="1.27" layer="25">&gt;NAME
+<text x="-2.905" y="-0.14" size="1.27" layer="125">&gt;NAME
 </text>
-<text x="-3.34" y="-4.74" size="1.27" layer="27">&gt;VALUE
+<text x="-3.34" y="-4.74" size="1.27" layer="127">&gt;VALUE
 </text>
 </package>
 </packages>
@@ -18389,8 +18389,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="15.24" y="0" visible="pin" length="middle" rot="R180"/>
 <pin name="OUT-" x="15.24" y="2.54" visible="pin" length="middle" rot="R180"/>
 <pin name="VDD" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
-<text x="-2.54" y="8.382" size="1.27" layer="95">&gt;NAME</text>
-<text x="-3.048" y="-9.652" size="1.27" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="8.382" size="1.27" layer="125">&gt;NAME</text>
+<text x="-3.048" y="-9.652" size="1.27" layer="127">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
