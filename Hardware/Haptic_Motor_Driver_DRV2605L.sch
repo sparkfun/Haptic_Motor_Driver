@@ -17483,15 +17483,17 @@ Used on FTDI breakouts</description>
 <package name="1X02_POKEHOME">
 <description>2 pin poke-home connector
 
-part number 2072-2P from STA</description>
-<wire x1="-7.6" y1="-5.85" x2="-7.6" y2="5.85" width="0.2032" layer="21"/>
-<wire x1="-7.6" y1="5.85" x2="7.6" y2="5.85" width="0.2032" layer="21"/>
-<wire x1="7.6" y1="5.85" x2="7.6" y2="-5.85" width="0.2032" layer="21"/>
-<wire x1="7.6" y1="-5.85" x2="-7.6" y2="-5.85" width="0.2032" layer="21"/>
-<smd name="P2" x="7.2" y="-3" dx="2.6" dy="1.8" layer="1"/>
-<smd name="P1" x="7.2" y="3" dx="2.6" dy="1.8" layer="1"/>
-<smd name="P4" x="-4.5" y="-3" dx="7.4" dy="1.8" layer="1"/>
-<smd name="P3" x="-4.5" y="3" dx="7.4" dy="1.8" layer="1"/>
+part number 2062-2P from STA</description>
+<wire x1="-7" y1="-4" x2="-7" y2="2" width="0.2032" layer="21"/>
+<wire x1="-7" y1="2" x2="-7" y2="4" width="0.2032" layer="21"/>
+<wire x1="4.7" y1="4" x2="4.7" y2="-4" width="0.2032" layer="21"/>
+<wire x1="4.7" y1="-4" x2="-7" y2="-4" width="0.2032" layer="21"/>
+<smd name="P2" x="5.25" y="-2" dx="3.5" dy="2" layer="1"/>
+<smd name="P1" x="5.25" y="2" dx="3.5" dy="2" layer="1"/>
+<smd name="P4" x="-4" y="-2" dx="6" dy="2" layer="1"/>
+<smd name="P3" x="-4" y="2" dx="6" dy="2" layer="1"/>
+<wire x1="-7" y1="4" x2="4.7" y2="4" width="0.2032" layer="21"/>
+<text x="0.635" y="-3.175" size="0.4064" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -18127,14 +18129,14 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <technology name=""/>
 </technologies>
 </device>
-<device name="POKEHOME" package="1X02_POKEHOME">
+<device name="SMALL_POKEHOME" package="1X02_POKEHOME">
 <connects>
 <connect gate="G$1" pin="1" pad="P1 P3"/>
 <connect gate="G$1" pin="2" pad="P2 P4"/>
 </connects>
 <technologies>
 <technology name="">
-<attribute name="PROD_ID" value="CONN-?????"/>
+<attribute name="PROD_ID" value="CONN-13512"/>
 </technology>
 </technologies>
 </device>
@@ -18367,10 +18369,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="-1.305" y="1.56" radius="0.1" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="-1.24" x2="1.795" y2="-1.24" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="1.36" x2="1.795" y2="1.36" width="0.1" layer="21"/>
-<text x="-2.905" y="-0.14" size="1.27" layer="125">&gt;NAME
-</text>
-<text x="-3.34" y="-4.74" size="1.27" layer="127">&gt;VALUE
-</text>
+<text x="-2.905" y="2.4" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.34" y="-3.47" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
@@ -18389,28 +18389,28 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="GND" x="15.24" y="0" visible="pin" length="middle" rot="R180"/>
 <pin name="OUT-" x="15.24" y="2.54" visible="pin" length="middle" rot="R180"/>
 <pin name="VDD" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
-<text x="-2.54" y="8.382" size="1.27" layer="125">&gt;NAME</text>
-<text x="-3.048" y="-9.652" size="1.27" layer="127">&gt;VALUE</text>
+<text x="-2.54" y="8.382" size="1.27" layer="95">&gt;NAME</text>
+<text x="-3.048" y="-9.652" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
 <deviceset name="DRV2605L">
 <gates>
-<gate name="U" symbol="DRV2605L" x="0" y="2.54"/>
+<gate name="DRV2605" symbol="DRV2605L" x="0" y="2.54"/>
 </gates>
 <devices>
 <device name="" package="VSSOP-10">
 <connects>
-<connect gate="U" pin="EN" pad="P$5"/>
-<connect gate="U" pin="GND" pad="P$8"/>
-<connect gate="U" pin="IN/TRIG" pad="P$4"/>
-<connect gate="U" pin="OUT+" pad="P$7"/>
-<connect gate="U" pin="OUT-" pad="P$9"/>
-<connect gate="U" pin="REG" pad="P$1"/>
-<connect gate="U" pin="SCL" pad="P$2"/>
-<connect gate="U" pin="SDA" pad="P$3"/>
-<connect gate="U" pin="VDD" pad="P$10"/>
-<connect gate="U" pin="VDD/NC" pad="P$6"/>
+<connect gate="DRV2605" pin="EN" pad="P$5"/>
+<connect gate="DRV2605" pin="GND" pad="P$8"/>
+<connect gate="DRV2605" pin="IN/TRIG" pad="P$4"/>
+<connect gate="DRV2605" pin="OUT+" pad="P$7"/>
+<connect gate="DRV2605" pin="OUT-" pad="P$9"/>
+<connect gate="DRV2605" pin="REG" pad="P$1"/>
+<connect gate="DRV2605" pin="SCL" pad="P$2"/>
+<connect gate="DRV2605" pin="SDA" pad="P$3"/>
+<connect gate="DRV2605" pin="VDD" pad="P$10"/>
+<connect gate="DRV2605" pin="VDD/NC" pad="P$6"/>
 </connects>
 <technologies>
 <technology name="">
@@ -18487,7 +18487,7 @@ pull-ups from I2C bus</text>
 <instance part="JP1" gate="G$1" x="66.04" y="111.76"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="V" x="147.32" y="0"/>
-<instance part="U1" gate="U" x="134.62" y="111.76"/>
+<instance part="U1" gate="DRV2605" x="134.62" y="111.76"/>
 <instance part="C3" gate="G$1" x="109.22" y="99.06"/>
 <instance part="SUPPLY1" gate="G$1" x="154.94" y="129.54"/>
 <instance part="GND1" gate="1" x="154.94" y="93.98"/>
@@ -18503,7 +18503,7 @@ pull-ups from I2C bus</text>
 <wire x1="109.22" y1="93.98" x2="109.22" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="U" pin="GND"/>
+<pinref part="U1" gate="DRV2605" pin="GND"/>
 <wire x1="149.86" y1="111.76" x2="154.94" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="111.76" x2="154.94" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
@@ -18535,7 +18535,7 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="REG"/>
+<pinref part="U1" gate="DRV2605" pin="REG"/>
 <wire x1="119.38" y1="116.84" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="116.84" x2="109.22" y2="104.14" width="0.1524" layer="91"/>
@@ -18543,28 +18543,28 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="IN/TRIG"/>
+<pinref part="U1" gate="DRV2605" pin="IN/TRIG"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <wire x1="119.38" y1="109.22" x2="71.12" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="EN"/>
+<pinref part="U1" gate="DRV2605" pin="EN"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="119.38" y1="106.68" x2="71.12" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="OUT-"/>
+<pinref part="U1" gate="DRV2605" pin="OUT-"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="149.86" y1="114.3" x2="170.18" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="OUT+"/>
+<pinref part="U1" gate="DRV2605" pin="OUT+"/>
 <wire x1="149.86" y1="109.22" x2="167.64" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="109.22" x2="167.64" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
@@ -18589,12 +18589,12 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="VDD"/>
+<pinref part="U1" gate="DRV2605" pin="VDD"/>
 <wire x1="149.86" y1="116.84" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="116.84" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="154.94" y1="116.84" x2="154.94" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="U1" gate="U" pin="VDD/NC"/>
+<pinref part="U1" gate="DRV2605" pin="VDD/NC"/>
 <wire x1="149.86" y1="106.68" x2="152.4" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="106.68" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
 <junction x="152.4" y="116.84"/>
@@ -18602,7 +18602,7 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="SDA"/>
+<pinref part="U1" gate="DRV2605" pin="SDA"/>
 <pinref part="JP1" gate="G$1" pin="4"/>
 <wire x1="119.38" y1="114.3" x2="91.44" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -18613,7 +18613,7 @@ pull-ups from I2C bus</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U1" gate="U" pin="SCL"/>
+<pinref part="U1" gate="DRV2605" pin="SCL"/>
 <pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="119.38" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>

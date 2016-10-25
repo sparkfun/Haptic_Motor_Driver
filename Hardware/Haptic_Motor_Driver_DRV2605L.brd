@@ -180,7 +180,7 @@
 <text x="17.43075" y="8.255" size="1.27" layer="22" font="vector" ratio="15" rot="MR0">O-</text>
 <text x="4.85775" y="19.01825" size="1.4224" layer="22" font="vector" ratio="15" rot="MR180">DRV2605L</text>
 <text x="9.87425" y="4.28625" size="1.016" layer="21" font="vector" ratio="15">I2C</text>
-<text x="14.0335" y="1.905" size="1.016" layer="16" font="vector" ratio="15" rot="MR0">v01</text>
+<text x="14.0335" y="1.905" size="1.016" layer="16" font="vector" ratio="20" rot="MR0">v01</text>
 <text x="10.414" y="17.11325" size="1.016" layer="22" font="vector" ratio="15" rot="MR180">Haptic</text>
 <text x="5.0165" y="17.11325" size="1.016" layer="22" font="vector" ratio="15" rot="MR180">Driver</text>
 <text x="17.78" y="-14.12875" size="1.778" layer="51" font="vector" ratio="10" distance="10">Mary West</text>
@@ -190,6 +190,7 @@
 <dimension x1="20.32" y1="0" x2="20.32" y2="20.32" x3="27.94" y3="10.16" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <dimension x1="2.54" y1="17.78" x2="2.54" y2="0" x3="-8.89" y3="8.89" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 <dimension x1="1.27" y1="13.97" x2="1.27" y2="0" x3="-3.81" y3="6.985" textsize="1.778" textratio="15" layer="47" unit="inch"/>
+<text x="24.13" y="24.13" size="1.778" layer="47" font="vector" ratio="15">All Units in Inches</text>
 <dimension x1="19.05" y1="8.89" x2="19.05" y2="0" x3="34.29" y3="4.445" textsize="1.778" textratio="15" layer="47" unit="inch"/>
 </plain>
 <libraries>
@@ -1522,10 +1523,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <circle x="-1.305" y="1.56" radius="0.1" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="-1.24" x2="1.795" y2="-1.24" width="0.1" layer="21"/>
 <wire x1="-1.205" y1="1.36" x2="1.795" y2="1.36" width="0.1" layer="21"/>
-<text x="-2.905" y="-0.14" size="1.27" layer="125">&gt;NAME
-</text>
-<text x="-3.34" y="-4.74" size="1.27" layer="127">&gt;VALUE
-</text>
+<text x="-2.905" y="2.4" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.34" y="-3.47" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -1540,32 +1539,38 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="power" width="0.1016" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun-2-layer *">
-<description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
+<designrules name="SparkFun-2-layer-TIGHT">
+<description language="en">&lt;b&gt;SparkFun 2 Layer Design Rule Checks - STANDARD/TIGHT/FAB-LIMIT&lt;/b&gt;
 &lt;p&gt;
-The default Design Rules have been set to cover
-a wide range of applications. Your particular design
-may have different requirements, so please make the
-necessary adjustments and save your customized
-design rules under a new name.</description>
+These rules have been curated by SparkFuns DFM commitee. After doing much research, communicating with our multiple fab houses, and getting quotes of various designs, we have compiled three DRU files. 
+&lt;p&gt;
+&lt;b&gt;STANDARD:&lt;/b&gt; This is more of a &quot;best case scenario&quot; set of limitations. If your design has the space, and/or you have the time to work within these parameters, please do. Larger trace width and clearance makes for easier visual inspection of the PCB while troubleshooting (useful in production and to the end user). It also allows for better ability to hack a trace (if you are crazy enough to scrape away the mask and solder to a trace). Another thing to keep in mind is that more metal is just more robust. 
+&lt;p&gt;
+&lt;b&gt;TIGHT:&lt;/b&gt; This is where cost comes into play. We have found that most fab houses begin to add extra charges when you go smaller than these specs. In some cases, going to less than 15 mil trace can increase the cost by 10%. (This is why we have set the min drill on this DRU to 15 mil) Same story for traces thinner than 7 mil. To avoid those extra charges, then stay within the rules of this DRU.
+&lt;p&gt;
+&lt;b&gt;FAB-LIMIT:&lt;/b&gt; These set of rules are at the very limit of most fab houses capabilities. You will pay more for these specs, and it should be used on designs that have a darned good reason to need 4 mil vias and 4 mil traces.
+&lt;p&gt;
+**NOTE Clearance, Distance, Sizes, and Restring are all set to different limits in each of these three DRU files. Please compare the files within the CAM job editor window of eagle to see all the numbers.
+&lt;p&gt;
+***NOTE, Please set your Net Classes to default (0mil for all settings), so that it won't effect the DRC when you run it with these settings.</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="4mil"/>
-<param name="mdWirePad" value="4mil"/>
-<param name="mdWireVia" value="8mil"/>
-<param name="mdPadPad" value="4mil"/>
-<param name="mdPadVia" value="8mil"/>
-<param name="mdViaVia" value="8mil"/>
-<param name="mdSmdPad" value="4mil"/>
-<param name="mdSmdVia" value="8mil"/>
-<param name="mdSmdSmd" value="4mil"/>
+<param name="mdWireWire" value="7mil"/>
+<param name="mdWirePad" value="7mil"/>
+<param name="mdWireVia" value="7mil"/>
+<param name="mdPadPad" value="7mil"/>
+<param name="mdPadVia" value="7mil"/>
+<param name="mdViaVia" value="7mil"/>
+<param name="mdSmdPad" value="7mil"/>
+<param name="mdSmdVia" value="7mil"/>
+<param name="mdSmdSmd" value="7mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="8mil"/>
-<param name="mdDrill" value="8mil"/>
+<param name="mdCopperDimension" value="7mil"/>
+<param name="mdDrill" value="7mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="4mil"/>
+<param name="msWidth" value="7mil"/>
 <param name="msDrill" value="15mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
@@ -1576,15 +1581,15 @@ design rules under a new name.</description>
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="12mil"/>
+<param name="rlMinPadTop" value="7mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="10mil"/>
+<param name="rlMinPadInner" value="7mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="12mil"/>
+<param name="rlMinPadBottom" value="7mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="10mil"/>
+<param name="rlMinViaOuter" value="7mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="10mil"/>
+<param name="rlMinViaInner" value="7mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -1601,7 +1606,7 @@ design rules under a new name.</description>
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="20mil"/>
+<param name="mlViaStopLimit" value="25mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1706,7 +1711,7 @@ design rules under a new name.</description>
 <attribute name="PROD_ID" value="CONN-08437" x="1.27" y="1.27" size="1.27" layer="27" font="vector" ratio="15" rot="R90" display="off"/>
 </element>
 <element name="FRAME2" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="-12.7" y="-13.97" smashed="yes"/>
-<element name="U1" library="SparkFun-PowerIC" package="VSSOP-10" value="DRV2605L" x="10.63625" y="11.7475" smashed="yes">
+<element name="U1" library="SparkFun-PowerIC" package="VSSOP-10" value="DRV2605L" x="10.63625" y="11.7475">
 <attribute name="PROD_ID" value="IC-13504" x="10.63625" y="11.7475" size="1.778" layer="27" font="vector" ratio="15" display="off"/>
 </element>
 <element name="C3" library="SparkFun-Capacitors" package="0402-CAP" value="1.0uF" x="7.9375" y="14.605">
