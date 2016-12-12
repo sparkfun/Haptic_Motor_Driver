@@ -53,12 +53,18 @@ bool SFE_HMD_DRV2605L::begin()
   //Write 0x05 to use real time playback
   //Write 0x06 to perform a diagnostic - result stored in diagnostic bit in register 0x00
   //Write 0x07 to run auto calibration 
-  writeDRV2605L(MODE_REG, 0); // out of standby and sets the mode to Internal Trigger
+  
   
   //uint8_t mode = readDRV2605L(MODE_REG);
   //Serial.print("Status Register 0x"); Serial.println(mode, HEX);
  
   return true;
+}
+
+//Select Mode
+void SFE_HMD_DRV2605L::Mode(uint8_t mod)
+{
+	writeDRV2605L(MODE_REG, mod);	
 }
 
 //Select ERM or LRA 
