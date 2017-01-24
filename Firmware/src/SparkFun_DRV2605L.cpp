@@ -43,25 +43,21 @@ bool SFE_HMD_DRV2605L::begin()
   uint8_t status = readDRV2605L(STATUS_REG);
   Serial.print("Status Register 0x"); 
   Serial.println(status, HEX);
-  
-  //Set Mode:
-  //Write 0x00 to get out of standby and use internal trigger (using GO command)
-  //Write 0x01 to get out of standby + use External Trigger (edge triggered)
-  //Write 0x02 to get out of standby + External Trigger (level triggered)
-  //Write 0x03 to get out of standby + PWM input and analog output
-  //Write 0x04 to use Audio to Vibe
-  //Write 0x05 to use real time playback
-  //Write 0x06 to perform a diagnostic - result stored in diagnostic bit in register 0x00
-  //Write 0x07 to run auto calibration 
-  
-  
-  //uint8_t mode = readDRV2605L(MODE_REG);
-  //Serial.print("Status Register 0x"); Serial.println(mode, HEX);
+ 
  
   return true;
 }
 
 //Select Mode
+ //Write 0x00 to get out of standby and use internal trigger (using GO command)
+ //Write 0x01 to get out of standby + use External Trigger (edge triggered)
+ //Write 0x02 to get out of standby + External Trigger (level triggered)
+ //Write 0x03 to get out of standby + PWM input and analog output
+ //Write 0x04 to use Audio to Vibe
+ //Write 0x05 to use real time playback
+ //Write 0x06 to perform a diagnostic - result stored in diagnostic bit in register 0x00
+ //Write 0x07 to run auto calibration
+ 
 void SFE_HMD_DRV2605L::Mode(uint8_t mod)
 {
 	writeDRV2605L(MODE_REG, mod);	
@@ -224,8 +220,8 @@ void SFE_HMD_DRV2605L::RTP(uint8_t val)
  void SFE_HMD_DRV2605L::Vbatt(void)
  {
   uint8_t VBATT=readDRV2605L(VBATMONITOR_REG);
-  Serial.print("Battery Voltage 0x"); 
-  Serial.println(VBATT, HEX);
+  //Serial.print("Battery Voltage 0x"); 
+  //Serial.println(VBATT, HEX);
  } 
 
 //Read the LRA resonance period register 
@@ -233,8 +229,8 @@ void SFE_HMD_DRV2605L::RTP(uint8_t val)
  void SFE_HMD_DRV2605L::LRAPER(void)
  {
 	 uint8_t PER = readDRV2605L(LRARESPERIOD_REG);
-	 Serial.print("LRA resonance period 0x");
-	 Serial.println(PER, HEX);
+	// Serial.print("LRA resonance period 0x");
+	 //Serial.println(PER, HEX);
  }
  
  
