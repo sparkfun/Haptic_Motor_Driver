@@ -14,16 +14,15 @@ The SparkFun Haptic Motor Driver breakout board features six pins to provide pow
 Repository Contents
 -------------------
 
-* **/Documentation** - Data sheets, additional product information 
-* **/Firmware** - Example code 
+* **/Documentation** - Data sheets, additional product information, ZIP folder containing all project files and a ZIP folder containing libraries and example code 
 * **/Hardware** - Eagle design files (.brd, .sch)
-* **/Libraries** - Libraries for use with the Haptic Motor Driver
+* **/Libraries** - Libraries for use with the Haptic Motor Driver with some example projects 
 * **/Production** - Production panel files (.brd)
 
 
 Documentation
 --------------
-* **[Library](https://github.com/sparkfun/Haptic_Motor_Driver)** - <LANGUAGE> library for the <PRODUCT NAME>.
+* **[Library](https://github.com/sparkfun/Haptic_Motor_Driver)** - Arduino-compatible library for the Haptic Motor Driver.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/haptic-motor-driver-hook-up-guide?_ga=1.40125666.1788647015.1453914745)** - Basic hookup guide for the Haptic Motor driver. 
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 * **[SparkFun 3D Model repo](https://github.com/sparkfun/3D_Models)** - 3D models of SparkFun products. 

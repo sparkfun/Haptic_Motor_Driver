@@ -1,4 +1,4 @@
-SparkFun <PRODUCT NAME> Libraries
+SparkFun Haptic Motor Driver Libraries
 =================================
 
 Libraries for use in different environments. 
