@@ -1,4 +1,4 @@
-SparkFun <PRODUCT NAME> Production Files
+SparkFun DRV2605L Haptic Motor Driver Production Files
 =========================================
 
 
