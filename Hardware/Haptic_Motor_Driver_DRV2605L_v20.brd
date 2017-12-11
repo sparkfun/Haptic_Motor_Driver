@@ -180,7 +180,7 @@
 <text x="17.43075" y="8.255" size="1.27" layer="22" font="vector" ratio="15" rot="MR0">O-</text>
 <text x="4.85775" y="19.01825" size="1.4224" layer="22" font="vector" ratio="15" rot="MR180">DRV2605L</text>
 <text x="8.85825" y="4.66725" size="0.8128" layer="21" font="vector" ratio="15">I2C PU</text>
-<text x="19.3675" y="3.683" size="1.016" layer="16" font="vector" ratio="20" rot="MR0">v20</text>
+<text x="12.065" y="0.508" size="1.016" layer="16" font="vector" ratio="20" rot="MR0">v20</text>
 <text x="10.414" y="17.11325" size="1.016" layer="22" font="vector" ratio="15" rot="MR180">Haptic</text>
 <text x="5.0165" y="17.11325" size="1.016" layer="22" font="vector" ratio="15" rot="MR180">Driver</text>
 <text x="17.78" y="-14.12875" size="1.778" layer="51" font="vector" ratio="10" distance="10">Mary West</text>
