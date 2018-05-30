@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1728,7 +1728,6 @@
 <wire x1="221.488" y1="0" x2="221.488" y2="90.17" width="0.2032" layer="20"/>
 <wire x1="215.138" y1="0" x2="221.488" y2="0" width="0.2032" layer="20"/>
 <wire x1="215.138" y1="0" x2="215.138" y2="40.64" width="0.2032" layer="20"/>
-<rectangle x1="-7.62" y1="11.049" x2="-3.81" y2="13.843" layer="31"/>
 <rectangle x1="15.875" y1="12.319" x2="19.685" y2="15.113" layer="31"/>
 <rectangle x1="36.703" y1="12.319" x2="40.513" y2="15.113" layer="31"/>
 <rectangle x1="57.531" y1="12.319" x2="61.341" y2="15.113" layer="31"/>
