@@ -1,9 +1,9 @@
 SparkFun Haptic Motor Driver
 ========================================
 
-![SparkFun Haptic Motor Driver](https://cdn.sparkfun.com/assets/parts/1/1/8/4/7/14031-02.jpg)
+![SparkFun Haptic Motor Driver](https://cdn.sparkfun.com//assets/parts/1/2/6/5/5/14538-SparkFun_Haptic_Motor_Driver-DRV2605L-01.jpg)
 	
-[*SparkFun Haptic Motor Driver (ROB-14031)*](https://www.sparkfun.com/products/14031)
+[*SparkFun Haptic Motor Driver (ROB-14538)*](https://www.sparkfun.com/products/14538)
 	
 Ready to add some good vibes to your project? Look no further than the SparkFun Haptic Motor Driver. This board breaks out Texas Instruments' DRV2605L Haptic Motor Driver, which adds meaningful feedback from your devices using the breakout and an Arduino-compatible device.
 
@@ -29,11 +29,13 @@ Documentation
 Product Versions
 ---------------
 
+* [ROB-14538](https://www.sparkfun.com/products/retired/14538)- v20
 * [ROB-14031](https://www.sparkfun.com/products/retired/14031)- v10
 
 Version History
 ---------------
 
+* [v20](https://github.com/sparkfun/Haptic_Motor_Driver/releases/tag/v20) - v20
 * [v10](https://github.com/sparkfun/Haptic_Motor_Driver/releases/tag/v10) - Initial release
 
 License Information
