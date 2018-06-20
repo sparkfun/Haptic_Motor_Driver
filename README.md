@@ -1,5 +1,5 @@
 SparkFun Haptic Motor Driver
--========================================	
+========================================	
 
 ![SparkFun Haptic Motor Driver](https://cdn.sparkfun.com//assets/parts/1/2/6/5/5/14538-SparkFun_Haptic_Motor_Driver-DRV2605L-01.jpg)	
 	
@@ -12,8 +12,8 @@ The DRV2605L is capable of driving two different types of motors, ERM and LRA. I
 The SparkFun Haptic Motor Driver breakout board features six pins to provide power to the sensor and I2C bus. Additionally, a microcontroller that supports I2C is required to communicate with the DRV2605L and relay the data to the user by means of vibration. 	
 	
 Repository Contents	
---------------------	
-	
+---------------	
+
 * **/Documentation** - Data sheets, additional product information, ZIP folder containing all project files and a ZIP folder containing libraries and example code 	
 * **/Hardware** - Eagle design files (.brd, .sch)	
 * **/Libraries** - Libraries for use with the Haptic Motor Driver with some example projects 	
@@ -26,12 +26,12 @@ Documentation
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.	
 
 Product Versions
-----------------
+---------------
 * [ROB-14538](https://www.sparkfun.com/products/14538)- v20
 * [ROB-14031](https://www.sparkfun.com/products/retired/14031)- v10
 
 License Information
--------------------
+---------------
 
 This product is _**open source**_! 
 
