@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -18455,15 +18455,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C1" library="SparkFun-Capacitors" deviceset="1.0UF-16V-10%(0402)" device="" value="1.0uF"/>
+<part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="123.952" y="95.25" size="1.778" layer="97">7-Bit I2C Address: 0x5A</text>
-<text x="169.926" y="132.08" size="1.778" layer="97">VCC: 2-5.2V</text>
+<text x="157.226" y="119.38" size="1.778" layer="97">VCC: 2-5.2V</text>
 <text x="105.918" y="137.16" size="1.778" layer="97">Clear jumper to remove
 pull-ups from I2C bus</text>
-<text x="238.76" y="7.62" size="2.54" layer="94">v10</text>
+<text x="238.76" y="7.62" size="2.54" layer="94">v20</text>
 <text x="166.116" y="11.43" size="2.54" layer="94">Mary West </text>
 </plain>
 <instances>
@@ -18489,9 +18491,11 @@ pull-ups from I2C bus</text>
 <instance part="FRAME2" gate="V" x="147.32" y="0"/>
 <instance part="U1" gate="DRV2605" x="134.62" y="111.76"/>
 <instance part="C3" gate="G$1" x="109.22" y="99.06"/>
-<instance part="SUPPLY1" gate="G$1" x="154.94" y="129.54"/>
+<instance part="SUPPLY1" gate="G$1" x="193.04" y="119.38"/>
 <instance part="GND1" gate="1" x="154.94" y="93.98"/>
-<instance part="C1" gate="G$1" x="154.94" y="121.92"/>
+<instance part="C1" gate="G$1" x="193.04" y="111.76"/>
+<instance part="GND3" gate="1" x="193.04" y="101.6"/>
+<instance part="SUPPLY2" gate="G$1" x="152.4" y="119.38"/>
 </instances>
 <busses>
 </busses>
@@ -18514,6 +18518,11 @@ pull-ups from I2C bus</text>
 <pinref part="GND6" gate="1" pin="GND"/>
 <wire x1="76.2" y1="119.38" x2="76.2" y2="101.6" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="C1" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="109.22" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -18530,7 +18539,17 @@ pull-ups from I2C bus</text>
 <segment>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="127" x2="154.94" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="116.84" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U1" gate="DRV2605" pin="VDD"/>
+<wire x1="149.86" y1="116.84" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="U1" gate="DRV2605" pin="VDD/NC"/>
+<wire x1="149.86" y1="106.68" x2="152.4" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="106.68" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="116.84" x2="152.4" y2="119.38" width="0.1524" layer="91"/>
+<junction x="152.4" y="116.84"/>
+<pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -18585,19 +18604,6 @@ pull-ups from I2C bus</text>
 <wire x1="104.14" y1="129.54" x2="106.68" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="106.68" y1="129.54" x2="106.68" y2="127" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="U1" gate="DRV2605" pin="VDD"/>
-<wire x1="149.86" y1="116.84" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="116.84" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="116.84" x2="154.94" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="U1" gate="DRV2605" pin="VDD/NC"/>
-<wire x1="149.86" y1="106.68" x2="152.4" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="106.68" x2="152.4" y2="116.84" width="0.1524" layer="91"/>
-<junction x="152.4" y="116.84"/>
 </segment>
 </net>
 <net name="N$1" class="0">
