@@ -22,7 +22,7 @@ Repository Contents
 Documentation
 ---------------	
 
-* **[Library](https://github.com/sparkfun/Haptic_Motor_Driver)** - Arduino-compatible library for the Haptic Motor Driver.
+* **[Library](https://github.com/sparkfun/SparkFun_Haptic_Motor_Driver_Arduino_Library)** - Arduino-compatible library for the Haptic Motor Driver.
 * **[Hookup Guide](https://learn.sparkfun.com/tutorials/haptic-motor-driver-hook-up-guide)** - Basic hookup guide for the Haptic Motor driver.
 * **[SparkFun Fritzing repo](https://github.com/sparkfun/Fritzing_Parts)** - Fritzing diagrams for SparkFun products.
 
